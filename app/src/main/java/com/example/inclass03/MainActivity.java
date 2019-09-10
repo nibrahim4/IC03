@@ -16,7 +16,9 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String TAG_IMAGE = "photoProf";
     public static final String ERROR_MESSAGE = "Please enter a name.";
-    private  boolean isErrorThrown = false;
+    private  boolean isFirstNameErrorThrown = false;
+    private boolean isLastNameErrorThrown = false;
+    private boolean isGenderErrorThrown = false;
     RadioGroup rg_gender;
     RadioButton rb_Female;
     RadioButton rb_Male;
@@ -66,23 +68,23 @@ public class MainActivity extends AppCompatActivity {
 
                 if (et_firstName.getText().toString().equals("")){
                     et_firstName.setError(ERROR_MESSAGE);
-                    isErrorThrown = true;
+                    isFirstNameErrorThrown = true;
                 }else{
-                    isErrorThrown = false;
+                    isFirstNameErrorThrown = false;
                 }
                 if(et_lastName.getText().toString().equals("")){
                     et_lastName.setError(ERROR_MESSAGE);
-                    isErrorThrown = true;
+                    isLastNameErrorThrown = true;
                 }else{
-                    isErrorThrown = false;
+                    isLastNameErrorThrown = false;
                 }
-                if (flag_image[0].equals("")){
-                    isErrorThrown = true;
+                if (flag_image[0].equals("") || flag_image[0] == ""){
+                    isGenderErrorThrown = true;
                 }else{
-                    isErrorThrown = false;
+                    isGenderErrorThrown = false;
                 }
 
-                if (!isErrorThrown){
+                if (!isFirstNameErrorThrown && !isLastNameErrorThrown && !isGenderErrorThrown){
                     Intent intent = new Intent(MainActivity.this, DisplayActivity.class);
 
                     User user = new User(flag_image[0],et_firstName.getText().toString(),et_lastName.getText().toString());
