@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">In Class 03</string>
+    <string name="rb_Male_text">Male</string>
+    <string name="rb_Female_text">Female</string>
+    <string name="button_Save_text">Save</string>
+    <string name="button_Edit_text">Edit</string>
+    <string name="lbl_selectGender">Select Gender</string>
+    <string name="et_lastName_hint">Last Name</string>
+    <string name="et_firstName_hint" >First Name</string>
+    <string name="et_firstName_edit" />
+    <string name="et_lastName_edit" />
+    <string name="et_firstName" />
+    <string name="et_lastName" />
+    <string name="tv_fullName" />
+    <string name="tv_gender_display" />
+</resources>
