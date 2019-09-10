@@ -39,14 +39,14 @@ public class DisplayActivity extends AppCompatActivity {
         user = (User) extrasFromMain.getSerializable("user");
 
         if (user!=null){
-            tv_fullName.setText(user.getFirstName() + " " + user.getLastName());
+            tv_fullName.setText("Name: " + user.getFirstName() + " " + user.getLastName());
 
             if (user.getGender().equals("male")) {
                 iv_profile.setImageDrawable(getDrawable(R.drawable.male));
-                tv_gender.setText("male");
+                tv_gender.setText("Male");
             }else if(user.getGender().equals("female")){
                 iv_profile.setImageDrawable(getDrawable(R.drawable.female));
-                tv_gender.setText("female");
+                tv_gender.setText("Female");
             }
         }
 

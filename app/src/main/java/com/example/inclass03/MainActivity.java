@@ -14,6 +14,10 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    /* Nia Ibrahim
+       Abhishek Tanwer
+       Jahnvi Chitnis
+     */
     public static final String TAG_IMAGE = "photoProf";
     public static final String ERROR_MESSAGE = "Please enter a name.";
     private  boolean isFirstNameErrorThrown = false;
